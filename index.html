@@ -452,6 +452,18 @@
       padding: 6px 0 0;
     }
   </style>
+
+  <!-- Back to Main Menu button (added; does not block content) -->
+  <style>
+    .wrap{ padding-bottom: calc(12px + 64px); }
+    #mainMenuBtn{
+      position:fixed;
+      left:50%;
+      transform:translateX(-50%);
+      bottom: calc(10px + env(safe-area-inset-bottom));
+      z-index:20;
+    }
+  </style>
 </head>
 
 <body>
@@ -628,6 +640,14 @@
       </div>
     </div>
   </div>
+
+  <!-- Back to the Main Menu (bottom centre; non-blocking) -->
+  <button class="btn" id="mainMenuBtn" type="button">⬅ Back to the Main Menu</button>
+  <script>
+    document.getElementById('mainMenuBtn').addEventListener('click', ()=>{
+      window.location.href = "https://limkimsze-maker.github.io/P3_Mental_Sum_Challenge/";
+    });
+  </script>
 
 <script>
 /* =========================
@@ -1242,4 +1262,3 @@ loadQuestion(0);
   <script src="https://limkimsze-maker.github.io/assets/nav.js"></script>
 </body>
 </html>
-
